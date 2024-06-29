@@ -1,19 +1,29 @@
-<script setup lang="ts">
+<script setup>
 import TripLayout from '@/components/tripLayout.vue'
 
-import type { CSSProperties } from 'vue';
-const cardStyle: CSSProperties = {
-  width: '960px',
-};
-const imgStyle: CSSProperties = {
-  display: 'block',
-  width: '273px',
-};
+import { travelApi } from '@/api/module/travel'
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+const { query } = useRoute()
+const category = ref(query.category)
+console.log(category.value);
+const travelList = ref([])
+const categoryList = computed(() => travelList.value.filter(data => data.category === category.value))
+const getTravelList = async () => {
+  const { data, code } = await travelApi.getTravelList()
+  console.log(data);
+  travelList.value = data
+  console.log(categoryList.value);
+}
+
+onMounted(() => getTravelList())
+
+
 </script>
 
 <template>
 <trip-layout>
-
   <section class=" mx-auto mt-4">
 <a-carousel>
     <img class="h-[550px] mx-full object-cover" src="https://images.unsplash.com/photo-1509512658157-a8f3e5536669?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
