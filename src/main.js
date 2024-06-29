@@ -7,6 +7,8 @@ import Antd from "ant-design-vue";
 import { createPinia } from "pinia";
 import persist from "pinia-plugin-persistedstate";
 
+import "@/mock/index";
+
 const pinia = createPinia();
 pinia.use(persist);
 

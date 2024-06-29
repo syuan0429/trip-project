@@ -1,5 +1,7 @@
 <script setup>
 import TripLayout from '@/components/tripLayout.vue'
+import { FlagOutlined,CheckOutlined,CloseOutlined} from '@ant-design/icons-vue';
+
 </script>
 
 <template>
@@ -35,7 +37,7 @@ import TripLayout from '@/components/tripLayout.vue'
       <div><p class="text-base mb-6">經過了五天忙碌的上班日，周末給自己安排一場美食饗宴吧！</p>
       <p class="text-base mb-8 leading-relaxed">位於台北喜來登大飯店一樓的十二廚，挑高中庭的玻璃天幕設計與新鮮多元的美食料理，在不少賓客心中<br>享負「Buffet天王」的美譽，全廳劃分為12座全開放式的美食料理區，包含沙拉區、冷盤區、日式精選料<br>理區、中華美食區、西洋美食區、東南亞風味美食區、海鮮料理區、燒臘&燒烤美食區、各式麵食區、什<br>錦點心區、現場烘焙甜點&麵包區及各式飲品區。</p>
       <p class="text-base mb-6 leading-relaxed">各式料理皆為十二廚的拿手菜色，口味絕倫，一定能夠滿足您的味蕾！</p>
-      <p class="text-base mb-1 leading-relaxed"><FlagTwoTone />開放時間：</p>
+      <p class="text-base mb-1 leading-relaxed"><FlagOutlined class="bg-yellow-500 overflow-hidden"/> 開放時間：</p>
       <p class="text-base mb-12 leading-relaxed">午餐時段 週一至週五11:30 - 14:00</p>
       <a-button class="font-bold w-2/4 ml-20 mb-20 text-center" :size="large">返回前頁</a-button>
       </div>
@@ -50,10 +52,10 @@ import TripLayout from '@/components/tripLayout.vue'
         </ul>
         <p class="text-base mb-6">票券費用包含／不包含</p>
         <div class="flex justify-start ">
-          <p class="text-base mb-1 mr-20">餐飲折抵</p>
-          <p class="text-base mb-1">其他消費</p>
+          <p class="text-base mb-1 mr-20"><CheckOutlined class="bg-yellow-500 overflow-hidden mr-2" />餐飲折抵</p>
+          <p class="text-base mb-1"><CloseOutlined class="bg-yellow-500 overflow-hidden mr-2" />其他消費</p>
         </div>
-        <p class="text-base mb-20">服務費</p>
+        <p class="text-base mb-20"><CheckOutlined class="bg-yellow-500 overflow-hidden mr-2" />服務費</p>
         <a-button class="font-bold w-2/4 ml-20 mb-20 text-center" :size="large">返回前頁</a-button>
       </div>
       </a-tab-pane>

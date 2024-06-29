@@ -13,20 +13,8 @@ const imgStyle: CSSProperties = {
 
 <template>
 <trip-layout>
-<header>
-  <div class="container mx-auto py-2">
-    <nav class="flex justify-between items-center h-16">
-      <img  class="w-[200px]" src="@/assets/images/logo.png" alt="">
-      <ul class="flex">
-        <li class="mr-4 cursor-pointer">翻譯</li>
-        <li class="mr-4 cursor-pointer">登入</li>
-        <li class="cursor-pointer">註冊</li>
-    </ul>
-    </nav>
-  </div>
-</header>
 
-  <section class=" mx-auto mt-12">
+  <section class=" mx-auto mt-4">
 <a-carousel>
     <img class="h-[550px] mx-full object-cover" src="https://images.unsplash.com/photo-1509512658157-a8f3e5536669?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
   </a-carousel>

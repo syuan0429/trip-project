@@ -1,9 +1,13 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { GlobalOutlined } from '@ant-design/icons-vue'
 import { useAppStore } from '@/store/app'
+import { userApi } from '@/api/module/user'
+import { message } from 'ant-design/icons-vue';
+import { setToken, getToken } from '@/utils/localStorage'
+import { tourStepProps } from 'ant-design-vue/es/tour/interface';
 
 const appStore = useAppStore()
 const { t } = useI18n()
@@ -11,6 +15,13 @@ const router = useRouter()
 const changePage = (url) => {
   router.push(url)
 }
+const formState = reactive({
+  username: '',
+  password: ''
+})
+// TODO: 之後改成全局狀態
+const isLogin = ref(getToken())
+const visible = ref(false)
 const { locale } = useI18n()
 const languageList = ref([
   { locale: 'en-US', label: 'English' },
@@ -19,6 +30,39 @@ const languageList = ref([
 const changeLanguage = (lang) => {
   locale.value = lang
   appStore.setLanguage(lang)
+}
+const setModalVisible = (bool) => {
+  visible.value = bool
+}
+
+/*
+  username: 'emilys'
+  password: 'emilyspass'
+  JWT
+*/
+
+const logout = () => {
+  setToken('')
+  message.success('登出成功')
+  isLogin.value = false
+}
+
+const submit = async () => {
+  const loginData = {
+    username: formState.username,
+    password: formState.password
+  }
+  try {
+    const { token } = await userApi.login(loginData)
+    if (token) {
+      setToken(token)
+      setModalVisible(false)
+      message.success('登入成功')
+      isLogin.value = tourStepProps
+    }
+  } catch(err) {
+    message.error('使用者名稱或密碼錯誤')
+  }
 }
 </script>
 <template>
@@ -41,8 +85,8 @@ const changeLanguage = (lang) => {
               </template>
             </a-dropdown>
           </li>
-          <li class="mr-4 cursor-pointer">{{ t('login') }}</li>
-          <li class="cursor-pointer">註冊</li>
+          <li v-if="!isLogin" class="mr-4 cursor-pointer" @click="setModalVisible(true)">{{ t('login') }}</li>
+          <li v-else class="mr-4 cursor-pointer" @click="logout">{{ t('logout') }}</li>
         </ul>
       </nav>
     </div>
@@ -57,4 +101,19 @@ const changeLanguage = (lang) => {
       </div>
     </div>
   </section>
+    <a-modal v-model:open="visible" title="登入" centered :footer="null">
+    <a-form :model="formState" :label-col="{ span: 8 }" :wrapper-col="{ span: 16 }" autocomplete="off" @finish="submit">
+      <a-form-item label="使用者名稱" name="username" :rules="[{ required: true, message: '請輸入使用者名稱' }]">
+        <a-input v-model:value="formState.username" />
+      </a-form-item>
+
+      <a-form-item label="密碼" name="password" :rules="[{ required: true, message: '請輸入密碼' }]">
+        <a-input-password v-model:value="formState.password" />
+      </a-form-item>
+
+      <a-form-item :wrapper-col="{ offset: 10, span: 12 }">
+        <a-button type="primary" html-type="submit">登入</a-button>
+      </a-form-item>
+    </a-form>
+  </a-modal>
 </template>

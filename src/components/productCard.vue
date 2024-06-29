@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps,defineEmits } from 'vue'
 defineProps({
   image: {
     type: String,
@@ -26,10 +26,14 @@ defineProps({
     default: ''
   }
 })
+const emit = defineEmits(['btnClick'])
+const btnClick = () => {
+  emit('btnClick')
+}
 </script>
 
 <template>
-  <div class="border rounded-xl overflow-hidden">
+  <div @click="btnClick" class="border rounded-xl overflow-hidden">
     <div class="h-40">
       <img class="w-full h-40 object-cover" :src="image" alt="">
     </div>

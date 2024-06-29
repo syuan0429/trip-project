@@ -23,11 +23,6 @@ const router = createRouter({
       name: "notFound",
       component: () => import("@/views/NotFound/index.vue"),
     },
-    {
-      path: "/testAttractions",
-      name: "testAttractions",
-      component: () => import("@/views/TestAttractions/index.vue"),
-    },
   ],
 });
 
