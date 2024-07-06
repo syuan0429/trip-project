@@ -8,18 +8,22 @@
     "show": "hot",
     "rate": 4,
     "price": 1249,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "city": "台北",
+    "desc":"經過了五天忙碌的上班日，周末給自己安排一場美食饗宴吧！"
   },
   {
     "id": 2,
     "image": "https://media.istockphoto.com/id/964647326/photo/penghu-great-bridge-in-xiyu-township-penghu-taiwan.jpg?s=612x612&w=0&k=20&c=B-seAt6aUTqME4jmIqKuqN-MCwQ6TQE0tSZLQug8OCs=",
     "title": "【包車】 半日遊 | 跨海大橋＆大菓葉玄武岩＆奎壁山踏浪",
     "originPrice": 5000,
-    "category": "place",
+    "category": "traffic",
     "show": "hot",
     "rate": 3,
     "price": 4000,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "city": "澎湖",
+    "desc":"舒適澎湖包車旅遊服務來啦！不需擔心日曬雨淋，專業司機帶你上山下海，輕鬆造訪澎湖熱門景點。"
   },
   {
     "id": 3,
@@ -30,7 +34,9 @@
     "show": "hot",
     "rate": 3,
     "price": 290,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "city": "台北",
+    "desc":"台北最美山線，飽覽貓空山城，探索城市最佳首選，將台北市區與周邊郊區景點一網打盡！"
   },
   {
     "id": 4,
@@ -41,10 +47,90 @@
     "show": "hot",
     "rate": 2,
     "price": 300,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "city":"澎湖",
+    "desc":"澎湖最好玩新景點，全新海底隧道、海星觸摸池、趣味餵食秀不可錯過！"
   },
   {
     "id": 5,
+    "image": "https://www.fourpoints-penghu.com/assets/2022/05-24/gallery7039481353.jpg",
+    "title": "【餐券】 福朋喜來登星光港灣 BBQ 吃到飽",
+    "originPrice": 1200,
+    "category": "food",
+    "show": "hot",
+    "rate": 2,
+    "price": 960,
+    "label": "最優價格保證",
+    "city":"澎湖",
+    "desc":"炎炎夏日來澎湖，除了白天參觀玄武岩、玩水上設施和浮潛之外，怎麼能少了精彩獨特的夜生活呢！"
+  },
+  {
+    "id": 6,
+    "image": "https://image.card.tw.r10s.com/images/corp/merchant/d739/400x250.jpg",
+    "title": "【住宿】 枋客文旅 | 豪華雙人房住宿券",
+    "originPrice": 3800,
+    "category": "hotel",
+    "show": "hot",
+    "rate": 2,
+    "price": 3600,
+    "label": "最優價格保證",
+    "city":"屏東",
+    "desc":"旅客不妨停下腳步，駐留於枋寮這一純樸小漁村，體驗山與海與在地人這百年歷史秘境。"
+  },
+  {
+    "id": 7,
+    "image": "https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_129680/20220523021744_R2tD4/jpg",
+    "title": "【餐券】 鳳凰酒店｜鳳凰食號 早午餐券",
+    "originPrice": 750,
+    "category": "food",
+    "show": "hot",
+    "rate": 2,
+    "price": 688,
+    "label": "最優價格保證",
+    "city":"台中",
+    "desc":"供餐時段從上午七點持續到下午一點，提供星巴克咖啡無限暢飲，是台中最高CP值的酒店早午餐！"
+  },
+  {
+    "id": 8,
+    "image": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tbcfmfo9kkkq8tgi8rrp.webp",
+    "title": "【體驗】 小池角水上樂園 | 獨木舟 + SUP",
+    "originPrice": 1950,
+    "category": "activity",
+    "show": "hot",
+    "rate": 2,
+    "price": 1800,
+    "label": "最優價格保證",
+    "city":"澎湖",
+    "desc":"碧海藍天，夏天來到澎湖小池角水上樂園，玩遍水上活動！"
+  },
+  {
+    "id": 9,
+    "image": "https://qqhair.tw/wp-content/uploads/2020/10/2-3.jpg",
+    "title": "【包車】宜蘭一日遊 | 冬山河&羅東運動公園落羽松&羅東林業文化園區",
+    "originPrice": 5800,
+    "category": "traffic",
+    "show": "hot",
+    "rate": 2,
+    "price": 5490,
+    "label": "最優價格保證",
+    "city":"宜蘭",
+    "desc":"包含冬山河公園、羅東林業文化園區及運動公園，可觀賞落羽松、暢遊冬山河，學習林場歷史文化！"
+  },
+  {
+    "id": 10,
+    "image": "https://activity.cdn-eztravel.com.tw/TKAI9348_002.jpg",
+    "title": "【體驗】 300cc ATV 沙灘車體驗 | 露境東岳",
+    "originPrice": 1200,
+    "category": "activity",
+    "show": "hot",
+    "rate": 2,
+    "price": 999,
+    "label": "最優價格保證",
+    "city":"宜蘭",
+    "desc":"行經粉鳥林祕境沙灘、東岳湧泉等景點，一同在東澳秘境的大草原露營場中。盡興奔馳吧！"
+  },
+  {
+    "id": 11,
     "image": "https://images.unsplash.com/photo-1647941603875-a56ae65894b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "title": "【門票】 袖珍博物館",
     "category": "place",
@@ -52,10 +138,12 @@
     "show": "photo",
     "rate": 4,
     "price": 250,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "city":"台北",
+    "desc":"袖珍博物館-穿越時光隧道，走遍世界各大經典地標，感受獨特的異國風情。"
   },
   {
-    "id": 6,
+    "id": 12,
     "image": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     "title": "【門票】 台北101觀景台",
     "category": "place",
@@ -63,43 +151,155 @@
     "show": "photo",
     "rate": 4,
     "price": 420,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"最高最夢幻打卡點，白天有絕佳視野，夜晚賞景，一覽台北都市美好，自在享受各種風情與美景！ ",
+    "city": "台北"
   },
   {
-    "id": 7,
+    "id": 13,
     "image": "https://images.unsplash.com/photo-1498175682691-9acfdb41c49e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8RmVycmlzJTIwd2hlZWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "title": "【門票】 美麗華摩天輪 情人節限定",
-    "originPrice": 200,
+    "originPrice": 250,
     "category": "activity",
     "show": "photo",
     "rate": 4,
-    "price": 150,
-    "label": "最優價格保證"
+    "price": 200,
+    "label": "最優價格保證",
+    "desc":"想來場浪漫的情人節約會，又不知道該如何規劃行程嗎？ 那你千萬不能錯過台北唯一的摩天輪💛",
+    "city":"台北"
   },
   {
-    "id": 8,
-    "image": "https://images.unsplash.com/photo-1534081333815-ae5019106622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGl2aW5nfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "id": 14,
+    "image": "https://kw-travel.com.tw/wp-content/uploads/2021/06/%E9%9B%99%E5%B1%A4%E5%B7%B4%E5%A3%AB02.jpg",
+    "title": "【交通】 台北雙層觀光巴士",
+    "originPrice": 550,
+    "category": "traffic",
+    "show": "photo",
+    "rate": 4,
+    "price": 500,
+    "label": "最優價格保證",
+    "desc":"台北觀光終於不同以往了！讓雙層巴士帶著旅客們以更輕鬆、更獨特的視角去遊覽台北吧！",
+    "city":"台北"
+  },
+  {
+    "id": 15,
+    "image": "https://www.94i-penghu.com/upload/catalog_schedule_list_pic/tw_catalog_schedule_list_20b04_k2mt7abuaw.jpg",
     "title": "【體驗】 澎湖海底郵筒潛水體驗(免證照)",
-    "originPrice": 2500,
     "category": "activity",
-    "show": "photo",
-    "rate": 4,
-    "price": 2400,
-    "label": "最優價格保證"
-  },
-  {
-    "id": 9,
-    "image": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlJTIwc2hvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
-    "title": "【餐券】 英迪格酒店｜CRAFT 咖啡廳餐券",
-    "category": "food",
-    "originPrice": 638,
+    "originPrice": 2600,
     "show": "photo",
     "rate": 3,
-    "price": 580,
-    "label": "最優價格保證"
+    "price": 2488,
+    "label": "最優價格保證",
+    "desc":"來到澎湖除了水上的SUP、獨木舟、浮潛體驗之外，還可以揹著氣瓶潛到10公尺的海底呢！",
+    "city":"澎湖"
   },
   {
-    "id": 10,
+    "id": 16,
+    "image": "https://zoo.kcg.gov.tw/_api/content/images/zoo_banner/50174/zoo_banner-image-qb13xszicegweaay6a_i5w.jpg",
+    "title": "【門票】 壽山動物園",
+    "category": "place",
+    "originPrice": 150,
+    "show": "photo",
+    "rate": 3,
+    "price": 100,
+    "label": "最優價格保證",
+    "desc":"南部最大的動物友善公立動物園，適合攜家帶眷一起認識可愛動物與牠們的產地。",
+    "city":"高雄"
+  },
+  {
+    "id": 17,
+    "image": "https://s.yimg.com/ny/api/res/1.2/Jg_yy9NbD0gIR3Kf4rmHrw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTUzMA--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2020-07/8238d8f0-ce84-11ea-8ca7-636e3b90e1a8",
+    "title": "【門票】 鹿粼梅花鹿園區",
+    "category": "place",
+    "originPrice": 280,
+    "show": "photo",
+    "rate": 3,
+    "price": 250,
+    "label": "最優價格保證",
+    "desc":"與梅花鹿近距離拍照、餵食，盡情享受與小鹿親密互動，有全台灣鹿種，包括梅花鹿、白鹿、水鹿。",
+    "city":"小琉球"
+  },
+  {
+    "id": 18,
+    "image": "https://networkwatcherrgvnetdiag.blob.core.windows.net/gds-blob/production/products/6565715b-3ac3-4fed-a4b1-22335cca7146/2.jpg",
+    "title": "【體驗】 星空酒吧 VIP 包廂",
+    "category": "place",
+    "originPrice": 550,
+    "show": "photo",
+    "rate": 3,
+    "price": 450,
+    "label": "最優價格保證",
+    "desc":"在海邊聽海、喝著小酒，搭配現場最chill的音樂，享受微醺的夜晚！",
+    "city":"澎湖"
+  },
+  {
+    "id": 19,
+    "image": "https://www.hotelindigokaohsiung.com/zh-hant/public/dine/gallery/craft_1.jpg",
+    "title": "【餐券】 英迪格酒店｜CRAFT 咖啡廳餐券",
+    "category": "food",
+    "originPrice": 400,
+    "show": "photo",
+    "rate": 3,
+    "price": 300,
+    "label": "最優價格保證",
+    "desc":"位於高雄中央公園英迪格酒店一樓，港都工業風加上美式餐廳時尚，成為週邊鄰里經常造訪的場所！",
+    "city":"高雄"
+  },
+  {
+    "id": 20,
+    "image": "https://images.1111.com.tw/11media/upload/1642413526.jpg",
+    "title": "【門票】 國立海洋生物博物館",
+    "category": "place",
+    "originPrice": 400,
+    "show": "photo",
+    "rate": 3,
+    "price": 300,
+    "label": "最優價格保證",
+    "desc":"全台規模最大海生館，館內魚種豐富，具寓教於樂功能，親子友人出遊首選！",
+    "city":"屏東"
+  },
+  {
+    "id": 21,
+    "image": "https://images.unsplash.com/photo-1557489980-d81552f27562?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8WXVrYXRhfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "title": "【體驗】台南納涼屋 | 2小時浴衣體驗",
+    "category": "activity",
+    "originPrice": 700,
+    "show": "photo",
+    "rate": 3,
+    "price": 600,
+    "label": "最優價格保證",
+    "desc":"納涼屋區分為納涼屋大町及日式傳統服裝體驗室，古色古香的環境等你來親眼領略！",
+    "city":"台南"
+  },
+  {
+    "id": 22,
+    "image": "https://pix8.agoda.net/hotelImages/908/908946/908946_17040409170052108923.jpg?ca=6&ce=1&s=1280x",
+    "title": "【住宿】 泰美風情旅店 | 雙人房住宿券",
+    "category": "hotel",
+    "originPrice": 3400,
+    "show": "ticket",
+    "rate": 3,
+    "price": 3200,
+    "label": "最優價格保證",
+    "desc":"採泰式休間主義，搭配大量的植栽與老闆從泰國帶回的裝飾品，讓旅客能感受到小琉球的悠閒慵懶！",
+    "city":"小琉球"
+  },
+  {
+    "id": 23,
+    "image": "https://cnews.com.tw/wp-content/uploads/%E5%9C%96%E7%89%87128.jpg",
+    "title": "【兩館聯票】 科教館 | 天文館",
+    "category": "place",
+    "originPrice": 200,
+    "show": "ticket",
+    "rate": 3,
+    "price": 150,
+    "label": "最優價格保證",
+    "desc":"天文迷必去！透過各式模型、生動有趣的圖文解說及互動體驗，認識太空探索的發展！",
+    "city":"台北"
+  },
+  {
+    "id": 24,
     "image": "https://www.kkday.com/zh-tw/blog/wp-content/uploads/taipei_steak_USDA-Prime-Ribeye-Top-Cap-Steak-6oz-2.jpg",
     "title": "【餐券】 教父牛排 頂級老饕牛排",
     "originPrice": 3800,
@@ -107,10 +307,51 @@
     "category": "food",
     "rate": 4,
     "price": 3600,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"位於大直美麗華附近的教父牛排，早已是無人不知、無人不曉的牛排名店了吧！",
+    "city":"台北"
   },
   {
-    "id": 11,
+    "id": 25,
+    "image": "https://ucarecdn.com/56134623-8726-4401-890d-70d6757e2796/",
+    "title": "【餐券】 瓦城餐廳抵用券300元",
+    "originPrice": 350,
+    "show": "ticket",
+    "category": "food",
+    "rate": 4,
+    "price": 250,
+    "label": "最優價格保證",
+    "desc":"喜愛泰式料理酸酸辣辣口味的你，相信對於全台最大的泰國料理品牌「瓦城」肯定不陌生吧！",
+    "city":"台北"
+  },
+  {
+    "id": 26,
+    "image": "https://www.taiwanstay.net.tw/TSA/twpic/49958.jpg",
+    "title": "【住宿】 維多麗亞飯店 | 豪華客房平日住宿券",
+    "originPrice": 4950,
+    "show": "ticket",
+    "category": "hotel",
+    "rate": 4,
+    "price": 4800,
+    "label": "最優價格保證",
+    "desc":"維多麗亞飯店以十九世紀英國盛世維多麗亞王朝之建築風格聞名，於大直商圈著名的古典時尚旅館。",
+    "city":"台北"
+  },
+  {
+    "id": 27,
+    "image": "https://pic.pimg.tw/eddiesungl0113/1622030829-944699562-g_wn.jpg",
+    "title": "【餐券】 小琉球五點燒烤",
+    "originPrice": 650,
+    "show": "ticket",
+    "category": "food",
+    "rate": 4,
+    "price": 538,
+    "label": "最優價格保證",
+    "desc":"半露天的烤肉場域，入座後直接拿起桌上的餐盤，牡蠣、蝦子、小卷、魷魚等當日新鮮現撈的食材。",
+    "city":"小琉球"
+  },
+  {
+    "id": 28,
     "image": "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2N1YmElMjBkaXZpbmd8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "title": "【體驗】 熊潛水 | 潛水體驗(免證照)",
     "originPrice": 2500,
@@ -118,10 +359,12 @@
     "category": "activity",
     "rate": 3,
     "price": 2051,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"不會游泳的你也想跟海龜近距離拍照嗎，那麼小琉球和熊潛水絕對可以幫助你實現夢想！",
+    "city":"小琉球"
   },
   {
-    "id": 12,
+    "id": 29,
     "image": "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmlyZXdvcmslMjAxMDF8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "title": "【門票】 跨年晚會演唱會 | 煙火秀搖滾區",
     "category": "activity",
@@ -129,10 +372,12 @@
     "show": "ticket",
     "rate": 3,
     "price": 1688,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"台北每年最熱門的活動之一，絕對是跨年演唱會和煙火秀啦！",
+    "city":"台北"
   },
   {
-    "id": 13,
+    "id": 30,
     "image": "https://images.unsplash.com/photo-1602693680104-b8ae3138c22b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8TWFycmlvdHR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "title": "【住宿】 萬豪酒店 | 經典客房平日住宿券",
     "originPrice": 8000,
@@ -140,10 +385,64 @@
     "show": "ticket",
     "rate": 3,
     "price": 7000,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"坐擁療癒身心的河濱景緻，台北萬豪在繁華市區中，帶您潛入靜謐怡人的都市花園。",
+    "city":"台北"
   },
   {
-    "id": 14,
+    "id": 31,
+    "image": "https://static.wixstatic.com/media/6bb3f2_66ecf9b62c274778913e5f5c241d24f6~mv2.jpg/v1/fill/w_1962,h_1342,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/6bb3f2_66ecf9b62c274778913e5f5c241d24f6~mv2.jpg",
+    "title": "【交通】 澎湖馬公 ↔ 嘉義布袋 往返船票",
+    "originPrice": 1800,
+    "category": "traffic",
+    "show": "ticket",
+    "rate": 3,
+    "price": 1500,
+    "label": "最優價格保證",
+    "desc":"澎湖有豐富繽紛的珊瑚礁及海洋資源，旅客可以在島嶼之間優游，享受大自然豐富的造景與生態。",
+    "city":"澎湖"
+  },
+  {
+    "id": 32,
+    "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/177181159.jpg?k=cad65b7edb99c0f51fe9fa152fd84045509873be389399c73a04809958fff3a8&o=&hp=1",
+    "title": "【住宿】 海悅飯店 | 經典雙床房住宿券",
+    "originPrice": 2500,
+    "category": "hotel",
+    "show": "ticket",
+    "rate": 3,
+    "price": 2000,
+    "label": "最優價格保證",
+    "desc":"創始於2009年春天，座落馬公市中心商圈，從客房可直接俯瞰馬公漁港，體驗碧海藍天的美麗港景。",
+    "city":"澎湖"
+  },
+  {
+    "id": 33,
+    "image": "https://i0.wp.com/oudragon.com/wp-content/uploads/2022/04/%E6%BE%8E%E6%B9%96%E6%99%B6%E7%BF%94%E8%99%9F%E5%A4%9C%E9%87%A3%E5%B0%8F%E7%AE%A101.jpg?resize=1100%2C733&ssl=1",
+    "title": "【美食】 夜釣小管 & 品嚐小管麵線",
+    "originPrice": 500,
+    "category": "food",
+    "show": "ticket",
+    "rate": 3,
+    "price": 450,
+    "label": "最優價格保證",
+    "desc":"推薦選擇赤崁港夜釣小管，小管漁獲量較多，也不必人擠人體驗海釣。",
+    "city":"澎湖"
+  },
+  {
+    "id": 34,
+    "image": "https://live.staticflickr.com/65535/52425995492_32376a4297_b.jpg",
+    "title": "【租車】 上美租車 | 機車、Gogoro、電動機車",
+    "originPrice": 400,
+    "category": "traffic",
+    "show": "ticket",
+    "rate": 3,
+    "price": 350,
+    "label": "最優價格保證",
+    "desc":"想要最在地的方式了解小琉球的風情和文化、體驗在地人的生活，當然需靠一台「歐兜賣」走天下。",
+    "city":"小琉球"
+  },
+  {
+    "id": 35,
     "image": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "title": "【住宿】 和田大飯店 | 雙人房住宿券",
     "category": "hotel",
@@ -151,6 +450,8 @@
     "show": "ticket",
     "rate": 3,
     "price": 2400,
-    "label": "最優價格保證"
+    "label": "最優價格保證",
+    "desc":"「舒適、悠閒、便利、親切」為核心價值，提供舒適的休憩空間，希望讓來遊玩的旅客都有家感覺。",
+    "city":"澎湖"
   }
 ]

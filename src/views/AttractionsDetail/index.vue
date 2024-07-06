@@ -8,31 +8,44 @@ import { FlagOutlined,CheckOutlined,CloseOutlined} from '@ant-design/icons-vue';
 <trip-layout>
 
   <section class="container mt-16 pl-28">
-<a-carousel>
-    <div class="rounded-xl overflow-auto hover:scale-105">
+<a-carousel class="autoplay">
+    <div class="rounded-xl overflow-auto ">
     <img class="h-[450px] w-full object-cover" src="https://www.sheratongrandtaipei.com/files/pages_15973118601159vm571_l.jpg" alt="">
     </div>
-    <div class="rounded-xl overflow-auto hover:scale-105">
+    <div class="rounded-xl overflow-auto">
     <img class="h-[450px] w-full object-cover" src="https://www.sheratongrandtaipei.com/files/pages_169954354913dqxci12_l.jpg" alt="">
     </div>
-    <div class="rounded-xl overflow-auto hover:scale-105">
+    <div class="rounded-xl overflow-auto">
     <img class="h-[450px] w-full object-cover" src="https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_34984/20220412041544_WnGIy/jpg" alt="">
     </div>
-    <div class="rounded-xl overflow-auto hover:scale-105 flex flex-space-around">
+    <div class="rounded-xl overflow-auto">
     <img class="h-[450px] w-full object-cover" src="https://qqhair.tw/wp-content/uploads/2022/04/collage-15.jpg" alt="">
     </div>
   </a-carousel>
   </section>
+  <a-layout>
   <section class="container mt-16 pl-28">
+    <div>
     <div class="flex justify-between">
       <a-button type="primary rounded-full bg-amber-400 mb-4">台北</a-button>
-    <a-button type="primary class=font-bold w-60 h-12 ml-20 mb-4 text-center bg-rose-600 text-xl">TWD 1,249起</a-button>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold mb-10">【餐券】 台北喜來登大飯店｜十二廚 Kitchen | 平日<br>自助午餐券</h3>
-    </div>
-
-  <a-tabs v-model:activeKey="activeKey">
+      <section>
+        <div>
+        <a-button type="primary class=font-bold w-60 h-12 ml-40 mb-4 text-center bg-rose-600 text-xl ">TWD 1,249起</a-button>
+      </div>
+      </section>
+      </div>
+      <div class="flex justify-between">
+        <h3 class="text-4xl font-bold mb-6 mr-4">【餐券】 台北喜來登大飯店｜十二廚 Kitchen | 平日<br>自助午餐券</h3>
+        <div>
+          <h4 class="text-xl ml-4 mb-4">使用日期:</h4>
+          <a-button type="primary class=font-bold w-60 h-12 ml-4 mb-4 text-center bg-yellow-300 text-xl">請選擇使用日期</a-button>
+          <!-- //月曆如何點擊再秀出來
+          <div :style="{ width: '300px', border: '1px solid #d9d9d9', borderRadius: '4px' }">
+          <a-calendar v-model:value="value" :fullscreen="false" @panelChange="onPanelChange" /> -->
+        </div>
+        </div>
+      <div class="flex justify-between">
+    <a-tabs class="w-[700px]" v-model:activeKey="activeKey">
       <a-tab-pane key="1" tab="票卷介紹">
       <div><p class="text-base mb-6">經過了五天忙碌的上班日，周末給自己安排一場美食饗宴吧！</p>
       <p class="text-base mb-8 leading-relaxed">位於台北喜來登大飯店一樓的十二廚，挑高中庭的玻璃天幕設計與新鮮多元的美食料理，在不少賓客心中<br>享負「Buffet天王」的美譽，全廳劃分為12座全開放式的美食料理區，包含沙拉區、冷盤區、日式精選料<br>理區、中華美食區、西洋美食區、東南亞風味美食區、海鮮料理區、燒臘&燒烤美食區、各式麵食區、什<br>錦點心區、現場烘焙甜點&麵包區及各式飲品區。</p>
@@ -44,7 +57,7 @@ import { FlagOutlined,CheckOutlined,CloseOutlined} from '@ant-design/icons-vue';
       </a-tab-pane>
     <a-tab-pane key="2" tab="購買須知" force-render>
       <div><ul class="text-base mb-6 list-disc">
-        <li>購買後，HH STAY 會將票券 QR code 寄到您的電子信箱，請務必妥善留存。</li>
+        <li>購買後，TRIPWAY 會將票券 QR code 寄到您的電子信箱，請務必妥善留存。</li>
         <li>下訂時請以「票券使用日」為主，下訂後即無法變更，敬請留意。</li>
         <li>若需變更使用日期或場次，請於票券使用前 7 日，將整筆訂單取消後，重新下訂。</li>
         <li>下單後請自行留意使用時間，請按照預訂日期及當天開放時間內使用，逾期失效。</li>
@@ -83,24 +96,29 @@ import { FlagOutlined,CheckOutlined,CloseOutlined} from '@ant-design/icons-vue';
       </div>
     </a-tab-pane>
   </a-tabs>
-  </section>
-    <footer>
-    <div class=" mx-auto w-full h-40 object-cover bg-slate-200">
-      <nav class="flex justify-around items-center h-16">
-        <div class="cursor-pointer" @click="changePage('/')">
-          <img class="w-[200px]" src="@/assets/images/logo.png" alt="">
+  <a-layout>
+        <a-layout-content :style="contentStyle"><h4 class="text-xl mb-4 ml-56">選擇人數:</h4>
+        <div>
+        <h4 class="text-xl mb-4 ml-56">一般票</h4>
+        <span class="text-xl ml-56"> $ 1,249/位</span>
+        <div>
+          <a-space class="ml-56 mt-4" direction="vertical">
+    <a-input-number v-model:value="value1" addon-before="-" addon-after="+"></a-input-number>
+  </a-space>
         </div>
-        <ul class="flex">
-          <li class="mr-4 cursor-pointer flex items-center">
-          </li>
-          <li class="mr-4 cursor-pointer">隱私權政策</li>
-          <li class="cursor-pointer">聯絡我們</li>
-        </ul>
-      </nav>
-      <p class="text-center">本網站僅供個人作品使用，不提供商業用途</p>
-    </div>
-  </footer>
+        <div class="ml-32">
+          <a-button type="primary class=font-bold w-60 h-12 ml-24 mb-4 mt-8 text-center bg-yellow-300 text-xl">加入購物車</a-button>
+        </div>
+        </div>
+        </a-layout-content>
+      </a-layout>
+  </div>
+  </div>
+  </section>
+</a-layout>
 </trip-layout>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

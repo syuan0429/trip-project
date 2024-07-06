@@ -1,25 +1,19 @@
 <script setup>
 import TripLayout from '@/components/tripLayout.vue'
 
-import { travelApi } from '@/api/module/travel'
-import { ref, onMounted, computed } from 'vue'
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
+import { useTravelStore } from '@/store/travel'
 
+const router = useRouter()
+const changePage = (url) => {
+  router.push(url)
+}
+const travelStore = useTravelStore()
 const { query } = useRoute()
 const category = ref(query.category)
-console.log(category.value);
-const travelList = ref([])
-const categoryList = computed(() => travelList.value.filter(data => data.category === category.value))
-const getTravelList = async () => {
-  const { data, code } = await travelApi.getTravelList()
-  console.log(data);
-  travelList.value = data
-  console.log(categoryList.value);
-}
-
-onMounted(() => getTravelList())
-
-
+const travelList = ref(travelStore.travelData.filter(data => data.category === category.value))
 </script>
 
 <template>
@@ -30,103 +24,34 @@ onMounted(() => getTravelList())
   </a-carousel>
   </section>
   <div class="container mx-auto py-2 mt-12">
-  <a-space direction="vertical border-solid">
-    <p>關鍵字搜尋</p>
-    <a-input v-model:value="value" placeholder="請輸入關鍵字" />
-    <p>篩選目的地</p>
-  <a-cascader v-model:value="value" placeholder="請選擇地區" :options="options" />
-  <br />
-  <a-button class="font-bold w-full text-center" :size="large">清除條件</a-button>
-  </a-space>
-  <a-card :style="cardStyle" :body-style="{ padding: 0, overflow: 'hidden' }">
-    <a-flex justify="space-between">
-      <img class="rounded-lg"
-        alt="avatar"
-        src="https://images.unsplash.com/photo-1498175682691-9acfdb41c49e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8RmVycmlzJTIwd2hlZWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-        :style="imgStyle"
-      />
-      <a-flex vertical align="flex-end" justify="space-between" :style="{ padding: '32px' }">
-        <a-typography>
-          <a-typography-title :level="3">
-            <h3>【門票】 美麗華摩天輪 情人節限定</h3>
-            <p class="text-base">想來場浪漫的情人節約會，又不知道該如何規劃行程嗎？ 那你千萬不能錯過台北唯一的摩天輪💛</p>
-          </a-typography-title>
-        </a-typography>
-        <a-button type="primary class=font-bold w-54 h-8 ml-20 mb-8 text-center bg-rose-600 text-xl rounded-lg" href="https://antdv.com" target="_blank">TWD 200起</a-button>
-      </a-flex>
-    </a-flex>
-  </a-card>
-    <a-card :style="cardStyle" :body-style="{ padding:0, overflow: 'hidden' }">
-    <a-flex justify="space-between">
-      <img class="rounded-lg"
-        alt="avatar"
-        src="https://images.unsplash.com/photo-1534081333815-ae5019106622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGl2aW5nfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-        :style="imgStyle"
-      />
-      <a-flex vertical align="flex-end" justify="space-between" :style="{ padding: '32px' }">
-        <a-typography>
-          <a-typography-title :level="3">
-            <h3>【體驗】 澎湖海底郵筒潛水體驗(免證照)</h3>
-            <p class="text-base">來到澎湖除了水上的SUP、獨木舟、浮潛體驗之外，還可以揹著氣瓶潛到10公尺的海底呢！</p>
-          </a-typography-title>
-        </a-typography>
-        <a-button type="primary class=font-bold w-54 h-8 ml-20 mb-8 text-center bg-rose-600 text-xl rounded-lg" href="https://antdv.com" target="_blank">TWD 200起</a-button>
-      </a-flex>
-    </a-flex>
-  </a-card>
-      <a-card :style="cardStyle" :body-style="{ padding:0, overflow: 'hidden' }">
-    <a-flex justify="space-between">
-      <img class="rounded-lg"
-        alt="avatar"
-        src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2N1YmElMjBkaXZpbmd8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-        :style="imgStyle"
-      />
-      <a-flex vertical align="flex-end" justify="space-between" :style="{ padding: '32px' }">
-        <a-typography>
-          <a-typography-title :level="3">
-            <h3>【體驗】 熊潛水 | 潛水體驗(免證照)</h3>
-            <p class="text-base">不會游泳的你也想跟海龜近距離拍照嗎，那麼小琉球和熊潛水絕對可以幫助你實現夢想！</p>
-          </a-typography-title>
-        </a-typography>
-        <a-button type="primary class=font-bold w-54 h-8 ml-20 mb-8 text-center bg-rose-600 text-xl rounded-lg" href="https://antdv.com" target="_blank">TWD 200起</a-button>
-      </a-flex>
-    </a-flex>
-  </a-card>
-  <a-card :style="cardStyle" :body-style="{ padding:0, overflow: 'hidden' }">
-    <a-flex justify="space-between">
-      <img class="rounded-lg"
-        alt="avatar"
-        src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmlyZXdvcmslMjAxMDF8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-        :style="imgStyle"
-      />
-      <a-flex vertical align="flex-end" justify="space-between" :style="{ padding: '32px' }">
-        <a-typography>
-          <a-typography-title :level="3">
-            <h3>【門票】 跨年晚會演唱會 | 煙火秀搖滾區</h3>
-            <p class="text-left">台北每年最熱門的活動之一，絕對是跨年演唱會和煙火秀啦！</p>
-          </a-typography-title>
-        </a-typography>
-        <a-button type="primary class=font-bold w-54 h-8 ml-20 mb-8 text-center bg-rose-600 text-xl rounded-lg" href="https://antdv.com" target="_blank">TWD 200起</a-button>
-      </a-flex>
-    </a-flex>
-  </a-card>
-  </div>
-  <footer>
-    <div class=" mx-auto w-full h-40 object-cover bg-slate-200">
-      <nav class="flex justify-around items-center h-16">
-        <div class="cursor-pointer" @click="changePage('/')">
-          <img class="w-[200px]" src="@/assets/images/logo.png" alt="">
+          <div class="flex justify-center">
+        <div class="mr-24">
+          <a-space direction="vertical">
+            <p class="text-base">關鍵字搜尋</p>
+            <a-input v-model:value="value" placeholder="請輸入關鍵字" />
+            <p class="text-base">篩選目的地</p>
+            <a-cascader v-model:value="value" placeholder="請選擇地區" :options="options" />
+            <br />
+            <a-button class="font-bold w-full text-center" :size="large">清除條件</a-button>
+          </a-space>
         </div>
-        <ul class="flex">
-          <li class="mr-4 cursor-pointer flex items-center">
-          </li>
-          <li class="mr-4 cursor-pointer">隱私權政策</li>
-          <li class="cursor-pointer">聯絡我們</li>
-        </ul>
-      </nav>
-      <p class="text-center">本網站僅供個人作品使用，不提供商業用途</p>
-    </div>
-  </footer>
+        <div>
+          <div @click="changePage(`/attractionsDetail/${item.id}`)"
+            class="flex justify-between w-full border  p-3 rounded-xl mb-5 last:mb-0 cursor-pointer"
+            v-for="item in travelList" :key="item.id">
+            <img class="w-[250px] h-[180px] object-cover rounded-l-xl mr-1" :src="item.image" alt="image">
+            <div class="w-[370px] overflow-hidden">
+              <h3 class="text-lg font-bold whitespace-nowrap overflow-hidden text-ellipsis mb-4">{{ item.title }}</h3>
+              <p class="text-base ml-2">{{ item.desc }}</p>
+              <div class="flex justify-end mt-10">
+                <span class="inline-block mt-3 bg-rose-600 text-white px-2 py-1 rounded-lg ">TWD {{ item.price
+                  }}<span class="text-sm">起</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
 </trip-layout>
 </template>
 

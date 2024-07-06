@@ -2,10 +2,10 @@
 import { useRouter } from 'vue-router'
 import { reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n';
-import { GlobalOutlined } from '@ant-design/icons-vue'
+import { GlobalOutlined ,ShoppingCartOutlined} from '@ant-design/icons-vue'
 import { useAppStore } from '@/store/app'
 import { userApi } from '@/api/module/user'
-import { message } from 'ant-design/icons-vue';
+import { message } from 'ant-design-vue';
 import { setToken, getToken } from '@/utils/localStorage'
 import { tourStepProps } from 'ant-design-vue/es/tour/interface';
 
@@ -75,7 +75,7 @@ const submit = async () => {
         <ul class="flex">
           <li class="mr-4 cursor-pointer flex items-center">
             <a-dropdown :trigger="['click']">
-              <GlobalOutlined />
+              <GlobalOutlined  class="text-2xl mb-2"/>
               <template #overlay>
                 <a-menu>
                   <a-menu-item v-for="item in languageList" :key="item.locale" @click="changeLanguage(item.locale)">
@@ -85,22 +85,35 @@ const submit = async () => {
               </template>
             </a-dropdown>
           </li>
-          <li v-if="!isLogin" class="mr-4 cursor-pointer" @click="setModalVisible(true)">{{ t('login') }}</li>
+          <li v-if="!isLogin" class="mr-4 mt-1 text-2xl cursor-pointer" @click="setModalVisible(true)">{{ t('login') }}</li>
           <li v-else class="mr-4 cursor-pointer" @click="logout">{{ t('logout') }}</li>
+          <li class="mr-4 cursor-pointer flex items-center">
+            <ShoppingCartOutlined class="text-3xl mb-2"/></li>
         </ul>
       </nav>
     </div>
   </header>
   <slot />
-  <section class="container mx-auto py-2">
-    <div data-v-ee51e445="" class="flex items-start gap-2 mb-6">
-      <div class="mt-2 h-2 w-2 bg-cc-primary"></div>
-      <div>
-        <h3 class="mb-2 text-xl font-bold md:text-[28px]">帶著你的趣味 TripWay 出發去！</h3>
-        <h6 class="break-all text-sm text-cc-other-4 md:text-base">帶你深入探索有趣又獨特的旅遊體驗行程！</h6>
+    <footer class="h-40 bg-slate-200">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="cursor-pointer" @click="changePage('/')">
+          <img class="w-[200px]" src="@/assets/images/logo.png" alt="">
+        </div>
+        <ul class="flex">
+          <li class="mr-4 cursor-pointer flex items-center">
+          </li>
+          <li class="mr-4 cursor-pointer">隱私權政策</li>
+          <li class="cursor-pointer">聯絡我們</li>
+        </ul>
       </div>
+      <p class="text-center">
+          本網站僅供個人作品使用，不提供商業用途<span class="mx-2">|</span
+          >SyuanTW
+        </p>
+        <p class="text-center">©2024 syuan All Rights Reserved.</p>
     </div>
-  </section>
+  </footer>
     <a-modal v-model:open="visible" title="登入" centered :footer="null">
     <a-form :model="formState" :label-col="{ span: 8 }" :wrapper-col="{ span: 16 }" autocomplete="off" @finish="submit">
       <a-form-item label="使用者名稱" name="username" :rules="[{ required: true, message: '請輸入使用者名稱' }]">

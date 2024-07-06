@@ -33,7 +33,7 @@ const btnClick = () => {
 </script>
 
 <template>
-  <div @click="btnClick" class="border rounded-xl overflow-hidden">
+  <div @click="btnClick" class="border rounded-xl overflow-hidden cursor-pointer">
     <div class="h-40">
       <img class="w-full h-40 object-cover" :src="image" alt="">
     </div>

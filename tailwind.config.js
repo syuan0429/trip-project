@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primaryGrey: "#757575",
+        themeColor: "#F3CA52",
       },
     },
   },
